@@ -81,7 +81,7 @@ class ManageUsers extends Component {
     // Lifecycle method: Fetch user data from the server when the component is mounted
     componentDidMount() {
         
-        fetch('${process.env.REACT_APP_API_URL}/users', {
+        fetch(`https://capstonefinal-968943e242eb.herokuapp.com/users`, {
             headers: {
                 'Content-Type': 'application/json',
                 'x-auth-token': localStorage.getItem('token')
@@ -117,7 +117,7 @@ class ManageUsers extends Component {
     // Function to fetch the list of users
     fetchUsers = () => {
         
-        fetch('${process.env.REACT_APP_API_URL}/users', {
+        fetch(`https://capstonefinal-968943e242eb.herokuapp.com/users`, {
             headers: {
                 'Content-Type': 'application/json',
                 'x-auth-token': localStorage.getItem('token')
@@ -145,7 +145,7 @@ class ManageUsers extends Component {
             role
         };
 
-        fetch('${process.env.REACT_APP_API_URL}/users/register', {
+        fetch(`https://capstonefinal-968943e242eb.herokuapp.com/users/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -203,7 +203,7 @@ class ManageUsers extends Component {
     handleDelete = () => {
         const userId = this.state.editingUser._id;
     
-        fetch(`${process.env.REACT_APP_API_URL}/users/${userId}`, {
+        fetch(`https://capstonefinal-968943e242eb.herokuapp.com/users/${userId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -233,7 +233,7 @@ class ManageUsers extends Component {
     handleSaveEdit = () => {
         const { editingUser } = this.state;
         
-        fetch(`${process.env.REACT_APP_API_URL}/users/${editingUser._id}`, {
+        fetch(`https://capstonefinal-968943e242eb.herokuapp.com/users/${editingUser._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

@@ -80,7 +80,7 @@ function Login() {
     
         try {
             // Send a POST request to the login endpoint
-            const response = await fetch('${process.env.REACT_APP_API_URL}/users/login', {
+            const response = await fetch(`https://capstonefinal-968943e242eb.herokuapp.com/users/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

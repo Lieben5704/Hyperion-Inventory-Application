@@ -136,7 +136,7 @@ function Register() {
         }
     
         try {
-            const response = await fetch('${process.env.REACT_APP_API_URL}/users/register', {
+            const response = await fetch(`https://capstonefinal-968943e242eb.herokuapp.com/users/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
