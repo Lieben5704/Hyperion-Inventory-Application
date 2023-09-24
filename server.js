@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 const mongoose = require('mongoose');
 const cors = require('cors');
-const morgan = require('morgan'); 
+const morgan = require('morgan');  
 
 // Import custom middleware and routes
 const isAuthenticated = require('./middleware/auth');
