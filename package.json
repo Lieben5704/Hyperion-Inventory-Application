@@ -4,8 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run start:backend",
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "node server.js",
+    "build": "npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
     "test": "mocha --recursive --exit",
-    "start": "nodemon server.js"
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "npm test"
   },
   "keywords": [],
   "author": "",
