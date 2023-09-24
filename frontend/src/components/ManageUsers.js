@@ -81,7 +81,7 @@ class ManageUsers extends Component {
     // Lifecycle method: Fetch user data from the server when the component is mounted
     componentDidMount() {
         
-        fetch('http://localhost:5000/users', {
+        fetch('${process.env.REACT_APP_API_URL}/users', {
             headers: {
                 'Content-Type': 'application/json',
                 'x-auth-token': localStorage.getItem('token')
@@ -117,7 +117,7 @@ class ManageUsers extends Component {
     // Function to fetch the list of users
     fetchUsers = () => {
         
-        fetch('http://localhost:5000/users', {
+        fetch('${process.env.REACT_APP_API_URL}/users', {
             headers: {
                 'Content-Type': 'application/json',
                 'x-auth-token': localStorage.getItem('token')
@@ -145,7 +145,7 @@ class ManageUsers extends Component {
             role
         };
 
-        fetch('http://localhost:5000/users/register', {
+        fetch('${process.env.REACT_APP_API_URL}/users/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -203,7 +203,7 @@ class ManageUsers extends Component {
     handleDelete = () => {
         const userId = this.state.editingUser._id;
     
-        fetch(`http://localhost:5000/users/${userId}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/users/${userId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -233,7 +233,7 @@ class ManageUsers extends Component {
     handleSaveEdit = () => {
         const { editingUser } = this.state;
         
-        fetch(`http://localhost:5000/users/${editingUser._id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/users/${editingUser._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
