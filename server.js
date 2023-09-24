@@ -12,6 +12,12 @@ const isAdmin = require('./middleware/admin');
 const itemController = require('./controllers/itemController');
 const userController = require('./controllers/userController');
 
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+});
+
 
 // Cors allows the server to specify which origins are permitted to access resources on this server.
 const corsOptions = {
