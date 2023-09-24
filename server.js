@@ -12,12 +12,6 @@ const isAdmin = require('./middleware/admin');
 const itemController = require('./controllers/itemController');
 const userController = require('./controllers/userController');
 
-const path = require('path');
-app.use(express.static(path.join(__dirname, 'frontend/build')));
-app.get('*', (req, res) => {
-res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
-});
-
 
 // Cors allows the server to specify which origins are permitted to access resources on this server.
 const corsOptions = {
@@ -50,6 +44,11 @@ app.post('/users', isAuthenticated, isAdmin, userController.createUser);
 app.put('/users/:id', isAuthenticated, isAdmin, userController.updateUser);
 app.delete('/users/:id', isAuthenticated,isAdmin, userController.deleteUser);
 
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.get('*', (req, res) => {
+res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+});
 
 app.use((err, req, res, next) => {
     console.error(err.stack);  // Log the error stack for debugging
