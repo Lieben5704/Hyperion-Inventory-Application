@@ -4,14 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start:backend",
-    "start:frontend": "cd frontend && npm start",
-    "start:backend": "node server.js",
-    "build": "npm run build:frontend",
-    "build:frontend": "cd frontend && npm run build",
-    "test": "mocha --recursive --exit",
-    "test:frontend": "cd frontend && npm test",
-    "test:backend": "npm test"
+    "start": "nodemon server.js",
+    "build": "cd frontend && npm install && npm run build",
+    "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +20,10 @@
     "mongoose": "^7.4.3",
     "morgan": "^1.10.0",
     "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": "18.16.0",
+    "npm": "9.6.2"
   },
   "devDependencies": {
     "chai": "^4.3.8",
