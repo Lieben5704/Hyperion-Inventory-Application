@@ -90,7 +90,7 @@ class Dashboard extends Component {
         this.fetchCategories();
     
         // Fetch user categories
-        fetch('https://capstonefinal-968943e242eb.herokuapp.com/categories', {
+        fetch('https://inventoryapphyperiondev-4768857309ab.herokuapp.com/categories', {
             headers: {
                 'x-auth-token': localStorage.getItem('token')
             }
@@ -126,7 +126,7 @@ class Dashboard extends Component {
         const selectedCategory = e.target.value;
 
         // Fetch items for the selected category
-        fetch(`https://capstonefinal-968943e242eb.herokuapp.com/items?category=${selectedCategory}`, {
+        fetch(`https://inventoryapphyperiondev-4768857309ab.herokuapp.com/items?category=${selectedCategory}`, {
             headers: {
                 'x-auth-token': localStorage.getItem('token')
             }
@@ -143,7 +143,7 @@ class Dashboard extends Component {
 
     // Function to fetch items based on category
     fetchItems = (category) => {
-        let url = 'https://capstonefinal-968943e242eb.herokuapp.com/items';
+        let url = 'https://inventoryapphyperiondev-4768857309ab.herokuapp.com/items';
     
         if (category) {
             url += `?category=${category}`;
@@ -177,7 +177,7 @@ class Dashboard extends Component {
         };
     
         // Send a POST request to add a new item
-        fetch('https://capstonefinal-968943e242eb.herokuapp.com/items', {
+        fetch('https://inventoryapphyperiondev-4768857309ab.herokuapp.com/items', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -233,7 +233,7 @@ class Dashboard extends Component {
 
     // Function to fetch categories
     fetchCategories = () => {
-        fetch('https://capstonefinal-968943e242eb.herokuapp.com/categories', {
+        fetch('https://inventoryapphyperiondev-4768857309ab.herokuapp.com/categories', {
             headers: {
                 'x-auth-token': localStorage.getItem('token')
             }
@@ -252,7 +252,7 @@ class Dashboard extends Component {
         const itemId = this.state.editingItem._id;
     
         // Send a DELETE request to remove the item
-        fetch(`https://capstonefinal-968943e242eb.herokuapp.com/items/${itemId}`, {
+        fetch(`https://inventoryapphyperiondev-4768857309ab.herokuapp.com/items/${itemId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -284,7 +284,7 @@ class Dashboard extends Component {
         const { editingItem } = this.state;
 
         // Send a PUT request to update the item
-        fetch(`https://capstonefinal-968943e242eb.herokuapp.com/items/${editingItem._id}`, {
+        fetch(`https://inventoryapphyperiondev-4768857309ab.herokuapp.com/items/${editingItem._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

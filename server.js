@@ -15,7 +15,7 @@ const userController = require('./controllers/userController');
 
 // Cors allows the server to specify which origins are permitted to access resources on this server.
 const corsOptions = {
-    origin: 'https://capstonefinal-968943e242eb.herokuapp.com/',  // The origin URL where requests can come from
+    origin: 'https://inventoryapphyperiondev-4768857309ab.herokuapp.com/',  // The origin URL where requests can come from
     optionsSuccessStatus: 200        // The status code to send when a preflight request (an initial, exploratory request sent by the browser) is successful. 
 };
 
