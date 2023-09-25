@@ -63,8 +63,8 @@ a user-friendly inventory management system built using the MERN stack (MongoDB,
 ## Deployment Description: 
 - The backend and frontend was deployed together, as it my application isnt extremely large or complex. 
 - A single Heroku application is more cost-effective and easier to manage, avoiding the need for separate hosting services or configurations for the front-end and back-end.
-- The application is deployed using the Heroku CLI and can be accessed from [https://capstonefinal-968943e242eb.herokuapp.com/](https://capstonefinal-968943e242eb.herokuapp.com/).
-- **Admin Login:** Username: admin, Password: asd123!
+- The application is deployed using Heroku and can be accessed from [https://inventoryapphyperiondev-4768857309ab.herokuapp.com/](https://inventoryapphyperiondev-4768857309ab.herokuapp.com/).
+- **Inventory Admin Login:** Username: admin, Password: asd123!
 
 ## Getting Started
 
