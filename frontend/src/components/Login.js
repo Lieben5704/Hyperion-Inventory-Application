@@ -60,8 +60,8 @@ const styles = {
 function Login() {
     // State to manage form data and error messages
     const [formData, setFormData] = useState({
-        username: '',
-        password: '',
+        username: 'admin',
+        password: 'asd123!',
         errorMessage: ''
     });
 
@@ -138,14 +138,14 @@ function Login() {
                 type="text"
                 name="username"
                 placeholder="Username"
-                defaultValue="admin"
+                defaultValue={formData.username}
                 onChange={handleChange}
                 style={styles.input}
             />
             <input
                 type="password"
                 name="password"
-                defaultValue="asd123!"
+                defaultValue={formData.password}
                 placeholder="Password"
                 onChange={handleChange}
                 style={styles.input}
