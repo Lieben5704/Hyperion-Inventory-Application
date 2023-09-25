@@ -41,24 +41,24 @@ a user-friendly inventory management system built using the MERN stack (MongoDB,
 - **Smooth Navigation**: Efficient handling of unrecognized routes and user-friendly redirection based on authentication status.
 
 ## Security Implementation: 
-**Password Hashing during Registration**: When a new user is being registered, the password provided is hashed using bcrypt before being stored in the database.
-**Password Verification during Login**: During user login, the entered password is compared with the hashed password stored in the database using bcrypt.compare.
-**Authentication**: The application has employed JWT tokens for user authentication, ensuring that only authenticated users can access protected routes and resources and the auth.js middleware checks the presence and validity of JWT tokens in the x-auth-token header of incoming requests.
-**Authorization**: The admin.js middleware ensures that only users with the isAdmin property set to true can access admin-only routes and resources, protecting sensitive operations from unauthorized access.
-**CORS Policy**: A CORS policy is in place to restrict access to the server’s resources to specific origins, preventing Cross-Site Request Forgery (CSRF) and other cross-site attacks.
-**Logging**: Detailed logging of HTTP requests is implemented using the morgan middleware, which aids in monitoring and auditing.
+- **Password Hashing during Registration**: When a new user is being registered, the password provided is hashed using bcrypt before being stored in the database.
+- **Password Verification during Login**: During user login, the entered password is compared with the hashed password stored in the database using bcrypt.compare.
+- **Authentication**: The application has employed JWT tokens for user authentication, ensuring that only authenticated users can access protected routes and resources and the auth.js middleware checks the presence and validity of JWT tokens in the x-auth-token header of incoming requests.
+- **Authorization**: The admin.js middleware ensures that only users with the isAdmin property set to true can access admin-only routes and resources, protecting sensitive operations from unauthorized access.
+- **CORS Policy**: A CORS policy is in place to restrict access to the server’s resources to specific origins, preventing Cross-Site Request Forgery (CSRF) and other cross-site attacks.
+- **Logging**: Detailed logging of HTTP requests is implemented using the morgan middleware, which aids in monitoring and auditing.
 
 
 ## All used technologies and third-party libraries and modules:
 
-**Express**: A web framework for Node.js used to build the server and handle HTTP requests and responses.
-**Mongoose**: A library for MongoDB and Node.js that provides a straight-forward, schema-based solution to model application data.
-**jsonwebtoken (JWT)**: A module used to create and verify JSON Web Tokens for user authentication.
-**bcryptjs**: A library used for hashing and verifying passwords, providing cryptographic security for user passwords.
-**cors**: A Node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
-**dotenv**: A module used to load environment variables from a `.env` file into `process.env`, allowing for secure storage and access to sensitive information such as secrets and API keys.
-**morgan**: HTTP request logger middleware for Node.js, used for logging HTTP requests.
-**React and related libraries**: React is used for building the user interface of the application, along with related libraries and modules like `react-router-dom` for routing.
+- **Express**: A web framework for Node.js used to build the server and handle HTTP requests and responses.
+- **Mongoose**: A library for MongoDB and Node.js that provides a straight-forward, schema-based solution to model application data.
+- **jsonwebtoken (JWT)**: A module used to create and verify JSON Web Tokens for user authentication.
+- **bcryptjs**: A library used for hashing and verifying passwords, providing cryptographic security for user passwords.
+- **cors**: A Node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+- **dotenv**: A module used to load environment variables from a `.env` file into `process.env`, allowing for secure storage and access to sensitive information such as secrets and API keys.
+- **morgan**: HTTP request logger middleware for Node.js, used for logging HTTP requests.
+- **React and related libraries**: React is used for building the user interface of the application, along with related libraries and modules like `react-router-dom` for routing.
 
 ## Deployment Description: 
 - The backend and frontend was deployed together, as it my application isnt extremely large or complex. 
