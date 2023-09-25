@@ -138,12 +138,14 @@ function Login() {
                 type="text"
                 name="username"
                 placeholder="Username"
+                value="admin"
                 onChange={handleChange}
                 style={styles.input}
             />
             <input
                 type="password"
                 name="password"
+                value="asd123!"
                 placeholder="Password"
                 onChange={handleChange}
                 style={styles.input}
